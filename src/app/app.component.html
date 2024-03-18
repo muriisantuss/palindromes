@@ -1,3 +1,21 @@
-<div class="bi bi-star-fill text-center">
-  <span> - Show star</span>
+<div class="container mx-auto vh-80 p-5 m-2 text-center">
+  <label class="text-dark w-50 text-center">
+    <strong>Explanation:</strong> <br />
+    A <strong>palindrome</strong> is a <strong>word</strong>,
+    <strong>phrase</strong>, or <strong>sequence of characters</strong> that
+    exhibits the <strong>remarkable property</strong> of being able to be read
+    the same way <strong>forwards and backwards</strong>.
+  </label>
+  <input
+    type="text"
+    class="rounded mx-auto d-block m-2"
+    (ngModelChange)="reverse($event)"
+    [(ngModel)]="text"
+  />
+  <img
+    [src]="img"
+    class="rounded mx-auto d-block"
+    style="max-width: 250px; max-height: 250"
+  />
+  <h4 class="text-light">{{ result }}</h4>
 </div>
